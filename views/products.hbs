@@ -1,0 +1,62 @@
+<div class="row">
+  <div class"col-md-12">
+   <h2>Pets available right now:</h2>
+   <h2 class="text-left"><p class=bg-info>{{title}}</h2>
+   <br>
+ </div>
+</div>
+
+<!--
+<div class="row">
+ <div class="col-md-12">
+   <form action="/products" method="POST">
+     <label for="name">Name</label>
+     <input id="name" name="name" type="text-center"
+     placeholder="Enter you favorite pet">
+     <br>
+     <br>
+     <label for="photo">Photo</label>
+     <input id="photo" name="photo" type="text-center"
+     placeholder="Enter you favorite photo">
+     <br>
+     <br>
+     <label for="stock">Stock</label>
+     <input id="stock" name="stock" type="text-center"
+     placeholder="Enter amount">
+     <br> 
+     <br> 
+     <button type="submit" class="btn btn-primary">Add this cute (or not) animal</button>
+   </form>
+ </div>
+</div>
+-->
+
+<!--     
+<div class="row">
+    {{#each products}}
+    <div class="panel-body">
+        <h3 class="text-center">{{this.name}}</h3>  
+        </div>
+        <div class="panel-body">
+            <a href="#">
+                <img src="{{this.photo}}" class="img-thumbnail img-responsive" alt="{{this.name}}">
+            </a>
+        </div>
+        <div class="panel-footer">
+            Stock: {{this.stock}}
+        </div>  
+    </div> 
+    {{/each}}
+</div>
+-->
+
+
+<div class="row">
+  {{#each products}}
+  <div class="col-md-3 col-sm-4 col-xs-6">
+   <h3 class="text-center">{{this.name}}</h3>
+   <img src="{{this.photo}}" class="img-responsive" alt="{{this.name}}">
+   <div class="panel-footer"> Stock: {{this.stock}}</div>
+ </div>
+ {{/each}}
+</div>
